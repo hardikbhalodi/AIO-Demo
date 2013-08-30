@@ -19,6 +19,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btnParsingDemo, btnFbDemo, btnTwitterDemo, btnTabFrag,
 			btnFrag, btnListViewFilter, btnListMulti;
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
