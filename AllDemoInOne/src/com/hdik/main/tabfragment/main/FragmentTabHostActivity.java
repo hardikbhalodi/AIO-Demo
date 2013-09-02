@@ -50,7 +50,8 @@ public class FragmentTabHostActivity extends FragmentActivity implements
 	private Button btnHeaderBack;
 	final String arrTabLabel[] = { "First", "Second", "Third", "Forth" };
 	/*
-	 * used arrIcons when foreground icon and background image both required in tab
+	 * used arrIcons when foreground icon and background image both required in
+	 * tab
 	 */
 	/*
 	 * final static int arrIcons[] = {};
@@ -266,6 +267,39 @@ public class FragmentTabHostActivity extends FragmentActivity implements
 
 		if (hMapTabs.get(currentSelectedTab).size() <= 1) {
 			super.onBackPressed();
+			// if (currentSelectedTab.equalsIgnoreCase(Const.TAB_FIRST)) {
+			// super.onBackPressed();
+			// return;
+			// }
+			// tabHost.setCurrentTab(0);
+			// for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++)
+			// {
+			// TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i)
+			// .findViewById(TEXT_ID);
+			// View iv = (View) tabHost.getTabWidget().getChildAt(i);
+			// iv.setBackgroundColor(0x00000000);
+			// }
+			// TextView tv = (TextView)
+			// tabHost.getCurrentTabView().findViewById(
+			// TEXT_ID); // for Selected Tab
+			// tv.setTextColor(Color.parseColor("#ffffff"));
+			//
+			// View iv = (View) tabHost.getCurrentTabView();
+			// switch (tabHost.getCurrentTab()) {
+			// case 0:
+			// iv.setBackgroundResource(R.color.green);
+			// break;
+			// case 1:
+			// iv.setBackgroundResource(R.color.red);
+			// break;
+			// case 2:
+			// iv.setBackgroundResource(R.color.yellow);
+			// break;
+			// case 3:
+			// iv.setBackgroundResource(R.color.twitter);
+			// break;
+			//
+			// }
 		} else {
 			removeFragment();
 		}
