@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.hdik.main.db.EmployeeMainActivity;
+import com.hdik.main.fbdemo.FBLogin;
 import com.hdik.main.fragmentapp.MainFragmentActivity;
 import com.hdik.main.listviewfilter.ListViewFilterActivity;
 import com.hdik.main.listviewmultichoice.ListViewMultiChoice;
@@ -51,7 +52,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(new Intent(this, ParsingActivity.class));
 			break;
 		case R.id.btnFbDemo:
-
+			startActivity(new Intent(this, FBLogin.class));
 			break;
 
 		case R.id.btnTwitterDemo:
