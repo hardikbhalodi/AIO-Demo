@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.text.TextUtils;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.Window;
@@ -22,6 +23,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hdik.main.R;
 
@@ -57,7 +59,8 @@ public class AndyUtils {
 		}
 	}
 
-	public static void showCustomeProgressDialog(Context context, String msg,boolean isCancelable) {
+	public static void showCustomeProgressDialog(Context context, String msg,
+			boolean isCancelable) {
 		try {
 
 			if (msg == null || msg.equalsIgnoreCase("")) {
@@ -310,4 +313,21 @@ public class AndyUtils {
 		return sbr.toString();
 	}
 
+	public static int isValidate(String... fields) {
+		if (fields == null) {
+			return 0;
+		}
+
+		for (int i = 0; i < fields.length; i++) {
+			if (TextUtils.isEmpty(fields[i])) {
+				return i;
+			}
+
+		}
+		return -1;
+	}
+
+	public static void showToast(String msg, Context ctx) {
+		Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
+	}
 }

@@ -29,6 +29,10 @@
         <activity android:name=".twitterdemo.TwitterDemoActivity"></activity>
         <activity android:name=".twitterdemo.TwitterLogin"></activity>
         <activity android:name=".listviewmultichoice.ListViewMultiChoice"></activity>
+        <activity android:name=".db.EmployeeMainActivity"></activity>
+        <activity android:name=".db.InsertEmployeeActivity"></activity>
+        <activity android:name=".db.ViewEmployeeActivity"></activity>
+        <activity android:name=".db.UpdateEmployeeActivity"></activity>
   
       </application>
        

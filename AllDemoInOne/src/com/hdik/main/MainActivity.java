@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.hdik.main.db.EmployeeMainActivity;
 import com.hdik.main.fragmentapp.MainFragmentActivity;
 import com.hdik.main.listviewfilter.ListViewFilterActivity;
 import com.hdik.main.listviewmultichoice.ListViewMultiChoice;
@@ -17,22 +18,21 @@ import com.hdik.main.twitterdemo.TwitterDemoActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private Button btnParsingDemo, btnFbDemo, btnTwitterDemo, btnTabFrag,
-			btnFrag, btnListViewFilter, btnListMulti;
+			btnFrag, btnListViewFilter, btnListMulti, btnDatabaseDemo;
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_demo);
 		btnParsingDemo = (Button) findViewById(R.id.btnParsingDemo);
-
 		btnFbDemo = (Button) findViewById(R.id.btnFbDemo);
 		btnTwitterDemo = (Button) findViewById(R.id.btnTwitterDemo);
 		btnTabFrag = (Button) findViewById(R.id.btnTabFrag);
 		btnFrag = (Button) findViewById(R.id.btnFragmentDemo);
 		btnListViewFilter = (Button) findViewById(R.id.btnListViewFilter);
 		btnListMulti = (Button) findViewById(R.id.btnListViewMultiChoice);
+		btnDatabaseDemo = (Button) findViewById(R.id.btnDataBaseDemo);
 		btnListMulti.setOnClickListener(this);
 		btnListViewFilter.setOnClickListener(this);
 		btnFrag.setOnClickListener(this);
@@ -40,6 +40,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnFbDemo.setOnClickListener(this);
 		btnTwitterDemo.setOnClickListener(this);
 		btnTabFrag.setOnClickListener(this);
+		btnDatabaseDemo.setOnClickListener(this);
 	}
 
 	@Override
@@ -67,6 +68,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.btnListViewMultiChoice:
 			startActivity(new Intent(this, ListViewMultiChoice.class));
+			break;
+		case R.id.btnDataBaseDemo:
+			startActivity(new Intent(this, EmployeeMainActivity.class));
 			break;
 		}
 	}
