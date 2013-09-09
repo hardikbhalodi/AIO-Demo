@@ -4,6 +4,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.text.WordUtils;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -330,6 +332,7 @@ public class AndyUtils {
 	public static void showToast(String msg, Context ctx) {
 		Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
 	}
+
 	public static String UppercaseFirstLetters(String str) {
 		boolean prevWasWhiteSp = true;
 		char[] chars = str.toCharArray();
@@ -345,4 +348,18 @@ public class AndyUtils {
 		}
 		return new String(chars);
 	}
+
+	public static String CapitalizeFirstLetterInStringUsingWordUtils(String str) {
+
+		// // only the first letter of each word is capitalized.
+		// String wordStr =
+		// WordUtils.capitalize("this is first WORD capital test.");
+		// //Capitalize method capitalizes only first character of a String
+		// System.out.println("wordStr= " + wordStr);
+		// This method capitalizes first character of a String and make rest of
+		// the characters lowercase
+		return WordUtils.capitalizeFully(str);
+
+	}
+
 }
