@@ -17,6 +17,7 @@ import java.util.HashMap;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.FeatureInfo;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -71,7 +72,7 @@ public class FragmentTabHostActivity extends FragmentActivity implements
 		hMapTabs.put(Const.TAB_SECOND, new ArrayList<Fragment>());
 		hMapTabs.put(Const.TAB_THIRD, new ArrayList<Fragment>());
 		hMapTabs.put(Const.TAB_FORTH, new ArrayList<Fragment>());
-
+		
 		tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		tabHost.setOnTabChangedListener(this);
 		tabHost.setup();
@@ -93,6 +94,7 @@ public class FragmentTabHostActivity extends FragmentActivity implements
 				return findViewById(android.R.id.tabcontent);
 			}
 		});
+		
 		spec.setIndicator(arrTabs[0]);
 		tabHost.addTab(spec);
 
